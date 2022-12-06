@@ -1,0 +1,670 @@
+/* Importing google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+* {
+  /* Font Family */
+  font-family: "Inter", sans-serif;
+  color: white;
+
+  /* The box-sizing property allows us to include the padding and border in an element's total width and height*/
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 1100px;
+  width: 90%;
+  margin: auto;
+}
+
+nav {
+  /* Make the nav a flex so that we can center the 
+  content inside the nav */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Make sure the contents wrap when width gets lesser*/
+
+  padding-top: 15px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none; /* No style to list items */
+  margin: 10px 20px; /* Spacings between each list item */
+}
+
+nav ul li a {
+  color: #9e9e9e;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+nav ul li a:focus {
+  color: #f96766;
+  transition: 0.2s ease;
+}
+
+body {
+  background-color: #121212;
+}
+
+p {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/*------------------ Home ---------------------- */
+#home {
+  padding: 50px 0;
+}
+
+.home-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.home-col-1 img {
+  width: 30vw;
+  border-radius: 17px;
+}
+
+.home-col-1 {
+  margin: auto;
+}
+
+.home-col-2 {
+  display: flex;
+  align-items: center;
+}
+
+.home-col-2 h1 {
+  font-size: 3.7vw;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.home-col-2 p {
+  font-size: 1.3em;
+  color: #9e9e9e;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.home-col-2 h1 span {
+  color: #f96766;
+}
+
+/* Buttons */
+.home-col-2 a button {
+  background-color: #f84141;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 20px;
+  padding-left: 12px;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9em;
+
+  cursor: pointer;
+  height: 48px;
+}
+
+.home-col-2 a {
+  color: transparent;
+}
+
+#download-resume:hover {
+  background-color: #f96766;
+  transition: 0.1s ease;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  vertical-align: middle;
+  color: #121212;
+}
+
+.button-text {
+  color: #121212;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+#contact-me-button {
+  background-color: #121212;
+  border: 1px solid #f96766;
+  padding: 12px 20px;
+  margin-left: 15px;
+}
+
+#contact-me-button:hover {
+  background-color: #f84141;
+  transition: 0.2s ease-in-out;
+}
+
+#contact-me-button:hover .button-text {
+  color: #121212;
+}
+
+#contact-me-button .button-text {
+  color: #f96766;
+}
+
+/*------------------ Infographic ---------------------- */
+
+#infographic {
+  background-color: #262626;
+  border-radius: 17px;
+}
+
+.infographic-content {
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  height: fit-content;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+
+.infographic-content h2 {
+  color: #f96766;
+  font-weight: 800;
+  font-size: 3.2em;
+  letter-spacing: 0.5px;
+
+  margin-top: 0;
+  padding-top: 40px;
+  margin-bottom: 30px;
+}
+
+.infographic-content p {
+  color: #e1e1e1;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 24px;
+
+  width: 95%;
+  margin: auto;
+}
+
+.info-keys {
+  color: #f96766;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.info-key-container {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-row-gap: 1em;
+}
+
+#infographic-about {
+  transition: 0.2s ease;
+}
+
+/* This is initially none displaying and will display when toggled on*/
+#infographic-honesty {
+  display: none;
+  transition: 0.2s ease;
+}
+
+/* Targeting the p element that immediately comes after br element*/
+#infographic-honesty br + p {
+  color: #7e7e7e;
+  font-weight: 600;
+}
+/* Box around the slider*/
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+
+  margin-top: 3em;
+}
+
+/* Hide default HTML checkbox */
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f76866;
+  transition: 0.4s;
+
+  border-radius: 6px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #e1e1e1;
+  transition: 0.4s;
+
+  border-radius: 5px;
+}
+
+input:checked + .slider {
+  background-color: #9e9e9e;
+}
+
+input:checked + .slider:before {
+  transform: translateX(42px);
+}
+
+/*------------------ Education + Skills ---------------------- */
+
+#skills {
+  margin-top: 60px;
+}
+
+.skills-h2-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.skills-h2-container h2 {
+  font-size: 3.2em;
+  font-weight: 600;
+  color: #7e7e7e;
+}
+
+.skills-h2-container h2:hover {
+  cursor: pointer;
+  color: #f76866;
+  transition: 0.4s ease;
+}
+
+.skills-grid-container {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: repeat(auto-fit, minmax(max(280px, 100% / 4), 1fr));
+}
+
+.skill-card {
+  border-radius: 10px;
+  border: 1px solid #f76866;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 250px;
+}
+
+.skill-card h3 {
+  text-align: center;
+  color: #e1e1e1;
+  font-weight: 800;
+  font-size: 2em;
+  letter-spacing: 0.5px;
+
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  text-align: center;
+  color: #e1e1e1;
+  font-weight: 400;
+  line-height: 24px;
+
+  margin-top: 0;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.skill-card picture {
+  background-color: #262626;
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 55px;
+  height: 55px;
+
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.skill-card img {
+  width: 76%;
+}
+
+/* Hover properties for skillcard */
+.skills-grid-container .skill-card:hover {
+  background-color: #f84141;
+  transition: 0.4s ease;
+}
+
+.skill-card:hover h3 {
+  color: #262626;
+  font-weight: 800;
+  font-size: 2em;
+  letter-spacing: 0.5px;
+  transition: 0.4s ease;
+}
+
+.skill-card:hover p {
+  color: #262626;
+  font-weight: 400;
+  line-height: 24px;
+  transition: 0.4s ease;
+}
+
+/* Styling for education card */
+.education-card {
+  padding-bottom: 50px;
+}
+
+.education-card h3 {
+  color: #f76866;
+  font-weight: 800;
+  font-size: 2em;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}
+
+.education-card h4 {
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.education-card p span {
+  color: #9e9e9e;
+  font-size: 0.95em;
+  font-weight: 600;
+}
+
+.education-card p + p {
+  width: 80%;
+}
+
+/*------------------ Contact Me  ---------------------- */
+#contact-me {
+  background-color: #262626;
+  border-radius: 17px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.contact-me-contents {
+  border: 0;
+  margin: auto;
+  width: 70%;
+}
+
+#contact-me h2 {
+  font-size: 3em;
+  font-weight: 600;
+  color: #f76866;
+  text-align: center;
+
+  padding-top: 50px;
+}
+
+#contact-me input {
+  background-color: #121212;
+  color: #e1e1e1;
+}
+
+#contact-me textarea {
+  background-color: #121212;
+  color: #e1e1e1;
+}
+
+#contact-me label {
+  color: #9e9e9e;
+  font-weight: 600;
+}
+
+input {
+  /* Making sure that the browser is in dark mode when using forms*/
+  color-scheme: dark;
+}
+
+#form-submit-button {
+  background-color: #f84141;
+  color: #121212;
+
+  border: none;
+  border-radius: 8px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 600;
+
+  height: 48px;
+}
+
+#form-submit-button:hover {
+  background-color: #f76866;
+}
+
+.form-floating {
+  margin-top: 1em;
+}
+
+.form-control {
+  border: 0;
+}
+
+#contact-me-form legend {
+  color: #f76866;
+  margin-bottom: 10px;
+}
+
+#contact-me-form fieldset {
+  margin-top: 20px;
+}
+
+#contact-me-form small {
+  color: #9e9e9e;
+  font-weight: 600;
+}
+
+#other-description {
+  display: none;
+}
+
+.reason-container {
+  margin-bottom: 20px;
+}
+
+.date-container {
+  margin-bottom: 20px;
+}
+
+/* ------------------ Media Queries -----------------------------*/
+@media only screen and (max-width: 800px) {
+  .home-col-2 h1 {
+    font-size: 4.1vw;
+  }
+
+  .home-col-1 img {
+    width: 100%;
+    border-radius: 17px;
+  }
+
+  .home-col-1 {
+    margin: auto;
+  }
+
+  #skills h2 {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 672px) {
+  /*------------ Nav --------------- */
+  nav li {
+    font-size: 0.98em;
+  }
+
+  nav ul {
+    /* Center the nav*/
+    margin: auto;
+    width: 90%;
+  }
+
+  /*------------ Home --------------- */
+  .home-grid-container {
+    display: inline;
+    flex-direction: row;
+  }
+
+  .home-col-2 h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+
+  .home-col-1 img {
+    /* Making sure that the image doesn't squeeze and also change the position*/
+    object-fit: cover;
+    object-position: 0 25%;
+    height: 250px;
+  }
+
+  .home-col-2 a button {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+
+    text-align: center;
+    display: block;
+    font-size: 0.97em;
+
+    margin: 0;
+    cursor: pointer;
+    height: 48px;
+  }
+
+  .home-col-2 {
+    width: 60%;
+    padding-left: 20px;
+    margin: auto;
+
+    margin-top: 40px;
+  }
+
+  #contact-me-button {
+    padding: 12px 20px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .home-col-2 p {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  /*------------ Changing infographic --------------- */
+  #infographic h2 {
+    font-size: 2.5em;
+  }
+
+  #infographic p {
+    font-size: 1em;
+  }
+
+  .infographic-content {
+    width: 85%;
+    padding-bottom: 50px;
+  }
+
+  .info-key-container {
+    margin: 0;
+  }
+
+  /*------------ Changing skills --------------- */
+  #skills h2 {
+    font-size: 2em;
+  }
+
+  .skills-h2-container {
+    width: 80%;
+  }
+
+  .skill-card {
+    display: flex;
+    flex-direction: row;
+
+    height: fit-content;
+    align-items: center;
+  }
+
+  .skill-card picture {
+    border-radius: 9px;
+    margin: 0;
+  }
+
+  .skill-card h3 {
+    font-size: 1.4em;
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+
+  .skill-card h3:hover {
+    font-size: 0;
+  }
+
+  .skill-card p {
+    font-size: 2.8vw;
+    text-align: center;
+    margin: 0;
+    align-items: center;
+  }
+
+  .education-card {
+    padding-bottom: 0;
+  }
+
+  #contact-me h2 {
+    font-size: 2em;
+  }
+}
