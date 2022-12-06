@@ -1,19 +1,17 @@
-// Changing the content of INFOGRAPHIC section dynamically ---------------------------------------------
-
-let aboutContent = document.querySelector("#infographic-about");
-let honestyContent = document.querySelector("#infographic-honesty");
-
-// If any change to input is done, depending on whether the input is
-// checked or not, change the display of the respective content
-document.querySelector(".toggle input").addEventListener("change", (e) => {
-  aboutContent.style.display = e.target.checked ? "none" : "block";
-  honestyContent.style.display = e.target.checked ? "block" : "none";
-});
-
-// ---------------------------------------------
-
 const { skills, education } = window;
 function main() {
+  // Changing the content of INFOGRAPHIC section dynamically ---------------------------------------------
+
+  let aboutContent = document.querySelector("#infographic-about");
+  let honestyContent = document.querySelector("#infographic-honesty");
+
+  // If any change to input is done, depending on whether the input is
+  // checked or not, change the display of the respective content
+  document.querySelector(".toggle input").addEventListener("change", (e) => {
+    aboutContent.style.display = e.target.checked ? "none" : "block";
+    honestyContent.style.display = e.target.checked ? "block" : "none";
+  });
+
   const gridContainer = document.querySelector(".skills-grid-container");
   const skillTrigger = document.querySelector("#skill-trigger");
   const eduTrigger = document.querySelector("#education-trigger");
