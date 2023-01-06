@@ -13,11 +13,5 @@ window.education = [
     degree: "Advanced Diploma in Computer Programming & Analysis",
     year: "2022 - 2024",
     description: "Learned a lot about coding and achieved amazing achievements"
-  },
-  {
-    school: "Seneca College",
-    degree: "Advanced Diploma in Computer Programming & Analysis",
-    year: "2022 - 2024",
-    description: "Learned a lot about coding and achieved amazing achievements"
   }
 ];
